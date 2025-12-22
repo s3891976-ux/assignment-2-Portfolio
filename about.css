@@ -1,0 +1,746 @@
+.mai {
+  margin-top: -8vh;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+  align-items: center;
+}
+.about-image-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 5vh;
+  margin-left: 6vw;
+}
+
+.avartar {
+  width: 43vh;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.tomato1 {
+  position: absolute;
+  width: 10vh;
+  bottom: -5vh;
+  left: 5vw;
+  z-index: 2;
+  rotate: -25deg;
+  animation: float 3s ease-in-out infinite;
+}
+
+.tomato2 {
+  position: absolute;
+  width: 15vh;
+  bottom: -10px;
+  left: -50px;
+  z-index: 1;
+  animation: float 2s ease-in-out infinite;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-right: 8vw;
+  margin-top: 3vh;
+}
+
+.about-content h1 {
+  font-family: "Freckle Face", system-ui;
+  color: #027248;
+  font-size: 8rem;
+  margin: 0;
+  text-align: left;
+}
+
+.about-text-box {
+  background-color: #fff099;
+  padding: 2rem;
+}
+
+.about-text-box p {
+  line-height: 1.8;
+  margin: 0;
+  color: #027248;
+  font-size: 1.4rem;
+  text-align: justify;
+  font-family: "Delius", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.about-text-box p + p {
+  margin-top: 0.5rem;
+}
+
+.see-works-btn {
+  margin-top: 1rem;
+  background-color: #027248;
+  height: 8vh;
+  width: 25vw;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  z-index: 10;
+}
+
+.works-btn {
+  font-family: "Freckle Face", system-ui;
+  color: #fff099;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.see-works-btn:hover {
+  transform: scale(1.05);
+}
+
+#skills {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  position: relative;
+  margin-top: 30vh;
+  margin-bottom: 10vh;
+}
+
+.skills-title {
+  position: absolute;
+  margin-bottom: 3rem;
+  display: flex;
+  top: -20vw;
+  align-items: center;
+  height: 80vh;
+  rotate: 45deg;
+}
+
+.skills-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bag {
+  position: absolute;
+  width: 23vw;
+  max-width: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.bag:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.blender {
+  position: absolute;
+  width: 20vw;
+  max-width: 150px;
+  bottom: 10vh;
+  right: 25vw;
+  z-index: 6;
+}
+
+.blender.burst {
+  top: 5%;
+  right: 25%;
+  bottom: auto;
+  animation: float 3s ease-in-out infinite;
+  cursor: grab;
+}
+
+.blender.burst:active,
+.blender.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+  animation: none;
+}
+
+.bag:hover ~ .blender {
+  transform: scale(1.1);
+}
+
+.ps {
+  position: absolute;
+  width: 13vw;
+  max-width: 300px;
+  top: 35vh;
+  left: 27vw;
+  z-index: 6;
+}
+
+.ps.burst {
+  top: 5%;
+  left: 15%;
+  animation: float 3.5s ease-in-out infinite;
+  cursor: grab;
+}
+
+.ps.burst:active,
+.ps.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+  animation: none;
+}
+
+.bag:hover ~ .ps {
+  transform: scale(1.1);
+}
+
+.ai {
+  position: absolute;
+  width: 20vw;
+  max-width: 150px;
+  bottom: 2vw;
+  left: 30vw;
+  z-index: 6;
+}
+
+.ai.burst {
+  bottom: 1%;
+  left: 15%;
+  animation: float 4s ease-in-out infinite;
+  cursor: grab;
+}
+
+.ai.burst:active,
+.ai.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+  animation: none;
+}
+
+.bag:hover ~ .ai {
+  transform: scale(1.1);
+}
+
+.davinci {
+  position: absolute;
+  width: 20vw;
+  max-width: 150px;
+  bottom: 16vh;
+  left: 35vw;
+  z-index: 4;
+}
+
+.davinci.burst {
+  top: 45%;
+  left: 5%;
+  bottom: auto;
+  transform: translateY(-50%);
+  animation: float 3.2s ease-in-out infinite;
+  cursor: grab;
+}
+
+.davinci.burst:active,
+.davinci.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+  animation: none;
+}
+
+.bag:hover ~ .davinci {
+  transform: scale(1.1);
+}
+
+.bag:hover ~ .davinci.burst {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.figma {
+  position: absolute;
+  width: 20vw;
+  max-width: 150px;
+  bottom: 18vh;
+  right: 37.5vw;
+  z-index: 6;
+}
+
+.figma.burst {
+  bottom: 5%;
+  right: 15%;
+  animation: float 3.8s ease-in-out infinite;
+  cursor: grab;
+}
+
+.figma.burst:active,
+.figma.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+  animation: none;
+}
+
+.bag:hover ~ .figma {
+  transform: scale(1.1);
+}
+
+.VS {
+  position: absolute;
+  width: 20vw;
+  max-width: 150px;
+  bottom: 3vh;
+  right: 35vw;
+  z-index: 6;
+}
+
+.VS.burst {
+  top: 35%;
+  right: 5%;
+  bottom: auto;
+  animation: float 3.8s ease-in-out infinite;
+  cursor: grab;
+}
+
+.VS.burst:active,
+.VS.dragging {
+  cursor: grabbing;
+  z-index: 1000;
+  animation: none;
+}
+
+.bag:hover ~ .VS {
+  transform: scale(1.1);
+}
+
+.bag:hover ~ .VS.burst {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.skill-set {
+  position: absolute;
+  bottom: -5vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30vw;
+  max-width: 400px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.skill-set.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .mai {
+    margin-top: -5vh;
+  }
+
+  .about-image-container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .avartar {
+    width: 100%;
+    max-width: 900px;
+    width: 40vw;
+  }
+
+  .tomato1 {
+    width: 7vh;
+    left: 35vw;
+  }
+
+  .tomato2 {
+    width: 12vh;
+    left: 25vw;
+  }
+
+  .about-content {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+  .about-content h1 {
+    font-size: 8rem;
+    text-align: center;
+  }
+
+  .about-text-box {
+    padding: 3rem;
+  }
+
+  .about-text-box p {
+    font-size: 1.2rem;
+  }
+
+  .see-works-btn {
+    width: 40vw;
+    height: 11vh;
+    margin: 1rem auto 0;
+  }
+
+  .works-btn {
+    font-size: 3.5rem;
+  }
+
+  .skills-title img {
+    width: 100%;
+    max-width: 1000px !important;
+  }
+
+  .skills-container {
+    height: 70vh;
+    margin-top: 12vh;
+  }
+
+  .skill-set {
+    width: 40vw;
+    max-width: 300px;
+    margin-top: -50vh !important;
+    bottom: 0;
+  }
+
+  .bag {
+    width: 28vw;
+    max-width: 280px;
+  }
+
+  .blender,
+  .ps,
+  .ai,
+  .davinci,
+  .figma,
+  .VS {
+    width: 15vw !important;
+    max-width: 100px !important;
+  }
+  .VS.burst {
+    top: 30%;
+  }
+  .ps {
+    width: 20vw !important;
+    max-width: 180px !important;
+    top: 35vh;
+    left: 35vw;
+  }
+  .davinci {
+    left: 40vw;
+    top: 50vh;
+  }
+  .VS {
+    right: 35vw;
+    bottom: 15vh;
+  }
+  .ai {
+    left: 33vw;
+    bottom: 12vh;
+  }
+  .blender {
+    bottom: 20vh;
+    right: 34vw;
+  }
+
+  .figma {
+    right: 52%;
+    top: 45vh;
+  }
+  .ai.burst {
+    top: 80%;
+    left: 10%;
+  }
+  .figma.burst {
+    right: 10%;
+    top: 75%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-grid {
+    padding: 3rem;
+  }
+
+  .mai {
+    margin-top: -1vh;
+  }
+
+  .about-image-container {
+    max-width: 280px;
+  }
+
+  .about-content h1 {
+    font-size: 5rem;
+  }
+
+  .about-text-box {
+    padding: 2rem;
+  }
+
+  .about-text-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .see-works-btn {
+    width: 50vw;
+    height: 8vh;
+  }
+
+  .works-btn {
+    font-size: 3rem;
+  }
+
+  #skills {
+    margin-top: 12vh;
+    padding: 1rem 1rem;
+    margin-bottom: 5vh;
+  }
+
+  .skills-title {
+    height: 50vh;
+    top: -20vw;
+  }
+
+  .skills-container {
+    height: 50vh;
+  }
+
+  .bag {
+    width: 50vw;
+  }
+
+  .blender,
+  .ps,
+  .ai,
+  .davinci,
+  .figma,
+  .VS {
+    width: 30vw;
+  }
+  .VS.burst {
+    top: 30%;
+  }
+  .ps {
+    width: 20vw !important;
+    max-width: 300px !important;
+    top: 25vh;
+    left: 40vw;
+  }
+  .davinci {
+    left: 40vw;
+    top: 36.5vh;
+  }
+  .VS {
+    right: 32vw;
+    bottom: 9vh;
+  }
+  .ai {
+    left: 32vw;
+    bottom: 5vh;
+  }
+  .blender {
+    bottom: 10vh;
+    right: 32vw;
+  }
+
+  .figma {
+    right: 52%;
+    top: 27vh;
+  }
+  .ai.burst {
+    top: 80%;
+    left: 10%;
+  }
+  .figma.burst {
+    right: 10%;
+    top: 75%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-image-container {
+    max-width: 100%;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .about-grid {
+    padding: 1rem;
+  }
+
+  .mai {
+    margin-top: -1vh;
+  }
+
+  #skills {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .about-content {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .about-content h1 {
+    margin-top: 5vh;
+    font-size: 4.5rem;
+  }
+
+  .about-text-box p {
+    font-size: 0.9rem;
+  }
+
+  .see-works-btn {
+    width: 70vw;
+    height: 6vh;
+  }
+
+  .works-btn {
+    font-size: 2rem;
+  }
+
+  .skills-title {
+    height: 32vh;
+  }
+
+  .skills-container {
+    height: 40vh;
+    margin-top: -10vh;
+  }
+
+  .bag {
+    width: 35vw;
+  }
+
+  .blender,
+  .ps,
+  .ai,
+  .davinci,
+  .figma,
+  .VS {
+    width: 33vw;
+  }
+
+  .skill-set {
+    width: 50vw;
+    margin-top: -10vh;
+    bottom: 10vh;
+  }
+
+  .avartar {
+    width: 90vw;
+    max-width: 90vw;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    display: block;
+  }
+
+  .tomato1 {
+    left: 20vw;
+  }
+
+  .tomato2 {
+    left: 0;
+  }
+
+  .ps {
+    top: 18vh !important;
+    left: 30vw !important;
+  }
+  .ps.burst {
+    top: 1vh !important;
+    left: 12vw !important;
+  }
+  .figma {
+    top: 25vh !important;
+    right: 40vw !important;
+  }
+  .figma.burst {
+    top: 16vh !important;
+    right: 5vw !important;
+  }
+  .blender {
+    bottom: 12vh !important;
+    right: 30vw !important;
+  }
+  .blender.burst {
+    bottom: 15vh !important;
+    right: 15vw !important;
+  }
+  .davinci {
+    top: 25vh !important;
+    left: 40vw !important;
+  }
+  .davinci.burst {
+    top: 18vh !important;
+    left: 5vw !important;
+  }
+  .VS {
+    bottom: 10vh !important;
+    right: 32vw !important;
+  }
+  .VS.burst {
+    top: 30vh !important;
+    right: 5vw !important;
+  }
+  .ai {
+    bottom: 7vh !important;
+    left: 30vw !important;
+  }
+  .ai.burst {
+    top: 35vh !important;
+    left: 10vw !important;
+  }
+  .davinvi {
+    left: 25vw;
+    bottom: 50vh !important;
+  }
+}

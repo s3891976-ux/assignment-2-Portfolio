@@ -1,0 +1,760 @@
+#main {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio {
+  position: absolute;
+  width: 40vw;
+  max-width: 900px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.portfolio:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.tomato {
+  position: absolute;
+  width: 8vw;
+  top: 10%;
+  left: 20%;
+  z-index: 5;
+  animation: float 3s ease-in-out infinite;
+}
+
+.tomato.falling {
+  animation: fall-tomato 1s cubic-bezier(0.5, 0, 1, 1) forwards;
+}
+
+.tomato.returning {
+  animation: return-to-origin 3s ease-out forwards;
+}
+
+.tomato.falling.disappearing {
+  animation: disappear 2s ease forwards;
+  scale: 0;
+  animation-timing-function: ease;
+  transition: scale 2s ease;
+}
+
+@keyframes fall-tomato {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(78vh) rotate(410deg);
+  }
+}
+
+.orange-bellpepper {
+  position: absolute;
+  width: 8vw;
+  top: 15%;
+  right: 20%;
+  z-index: 5;
+  animation: float 4s ease-in-out infinite;
+}
+
+.orange-bellpepper.falling {
+  animation: fall-orange 1s cubic-bezier(0.5, 0, 1, 1) 0.1s forwards;
+}
+
+.orange-bellpepper.falling.disappearing {
+  animation: fall-orange 1s cubic-bezier(0.5, 0, 1, 1) forwards,
+    disappear 1s ease forwards;
+  animation-delay: 0s, 0s;
+}
+
+@keyframes fall-orange {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(76vh) rotate(320deg);
+  }
+}
+
+.banana {
+  position: absolute;
+  width: 12vw;
+  top: 40%;
+  right: 10%;
+  z-index: 5;
+  animation: float 3.5s ease-in-out infinite;
+}
+
+.banana.falling {
+  animation: fall-banana 1s cubic-bezier(0.5, 0, 1, 1) 0.2s forwards;
+}
+
+.banana.falling.disappearing {
+  animation: fall-banana 1s cubic-bezier(0.5, 0, 1, 1) 0.1s forwards,
+    disappear 1s ease forwards;
+  animation-delay: 0.1s, 0s;
+}
+
+@keyframes fall-banana {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(45vh) rotate(150deg);
+  }
+}
+
+.yellow-bellpepper {
+  position: absolute;
+  width: 8vw;
+  bottom: 5%;
+  left: 30%;
+  z-index: 5;
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.yellow-bellpepper.falling {
+  animation: fall-yellow 1s cubic-bezier(0.5, 0, 1, 1) 0.15s forwards;
+}
+
+.yellow-bellpepper.falling.disappearing {
+  animation: fall-yellow 1s cubic-bezier(0.5, 0, 1, 1) 0.15s forwards,
+    disappear 1s ease forwards;
+  animation-delay: 0.15s, 0s;
+}
+
+@keyframes fall-yellow {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(12vh) rotate(280deg);
+  }
+}
+
+.carrot {
+  position: absolute;
+  width: 12vw;
+  bottom: 5%;
+  right: 25%;
+  z-index: 5;
+  animation: float 3.8s ease-in-out infinite;
+}
+
+.carrot.falling {
+  animation: fall-carrot 1s cubic-bezier(0.5, 0, 1, 1) 0.25s forwards;
+}
+
+.carrot.falling.disappearing {
+  animation: fall-carrot 1s cubic-bezier(0.5, 0, 1, 1) 0.25s forwards,
+    disappear 1s ease forwards;
+  animation-delay: 0.25s, 0s;
+}
+
+@keyframes fall-carrot {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(20vh) rotate(50deg);
+  }
+}
+
+.taro {
+  position: absolute;
+  width: 15vw;
+  top: 40%;
+  left: 8%;
+  z-index: 5;
+  animation: float 4.2s ease-in-out infinite;
+}
+.taro.falling {
+  animation: fall-taro 1s cubic-bezier(0.5, 0, 1, 1) 0.3s forwards;
+}
+
+.taro.falling.disappearing {
+  animation: fall-taro 1s cubic-bezier(0.5, 0, 1, 1) 0.3s forwards,
+    disappear 1s ease forwards;
+  animation-delay: 0.3s, 0s;
+}
+
+@keyframes fall-taro {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(50vh) rotate(330deg);
+  }
+}
+
+.star {
+  position: absolute;
+  width: 45vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(200vh) rotate(360deg);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+
+@keyframes scale-down {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}
+
+@keyframes return-to-origin {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.introduction {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+.cart-box {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  gap: 2rem;
+}
+
+.flip-card-link {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+.flip-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  pointer-events: auto;
+  left: -10vh;
+}
+
+.cart,
+.cart-back {
+  max-width: 85%;
+  height: auto;
+  transform: rotate(-15deg);
+  transition: transform 0.8s ease;
+}
+
+.flip-card:hover .cart,
+.flip-card:hover .cart-back {
+  transform: rotate(0deg);
+}
+
+.keychain {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.keychain-img {
+  max-width: 100vh;
+  width: 40vw;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: block;
+}
+
+.keychain-img:hover {
+  animation-play-state: paused;
+  scale: 1.1;
+}
+
+.see-more-btn {
+  display: none;
+  font-family: "Freckle Face", system-ui;
+  font-size: 2.5rem;
+  color: #fff8ee;
+  background-color: #027248;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 0;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #01533a;
+  transform: scale(1.05);
+}
+
+.main-footer {
+  min-height: 35vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem;
+  background: #f4bc17;
+}
+
+.main-footer h1 {
+  font-family: "Freckle Face", system-ui;
+  color: #fff099;
+  font-size: 6rem;
+  margin-top: -5%;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  align-items: center;
+  margin-top: -2%;
+}
+
+.main-footer img {
+  width: 3vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.main-footer img:hover {
+  transform: scale(1.2);
+}
+
+.horizontal-scroll {
+  width: 100%;
+  height: 10vh;
+  overflow: hidden;
+  background-color: #fff099;
+  margin-top: -5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  animation: scroll-horizontal 20s linear infinite;
+  will-change: transform;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 1.5rem;
+  flex-shrink: 0;
+}
+
+.scroll-track img {
+  height: 6vh;
+  width: auto;
+  display: block;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+@keyframes fall-tomato-tablet {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(70vh) rotate(410deg);
+  }
+}
+
+@keyframes fall-orange-tablet {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(62vh) rotate(320deg);
+  }
+}
+
+@keyframes fall-banana-tablet {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(12vh) rotate(150deg);
+  }
+}
+
+@keyframes fall-yellow-tablet {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(13vh) rotate(280deg);
+  }
+}
+
+@keyframes fall-carrot-tablet {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(10vh) rotate(50deg);
+  }
+}
+
+@keyframes fall-taro-tablet {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(65vh) rotate(330deg);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .portfolio {
+    width: 55vw;
+  }
+  #main {
+    margin-bottom: 20vh;
+  }
+
+  .tomato {
+    width: 15vw;
+    top: 10%;
+    left: 45%;
+  }
+
+  .orange-bellpepper {
+    width: 15vw;
+    top: 20%;
+    right: 12%;
+  }
+
+  .banana {
+    width: 17vw;
+    top: 70%;
+    right: 8%;
+  }
+
+  .carrot {
+    width: 19vw;
+    bottom: 10%;
+    right: 40%;
+  }
+
+  .taro {
+    width: 20vw;
+    top: 20%;
+    left: 9%;
+  }
+
+  .yellow-bellpepper {
+    width: 15vw;
+    bottom: 19%;
+    left: 10%;
+  }
+
+  .tomato.falling {
+    animation: fall-tomato-tablet 1s cubic-bezier(0.5, 0, 1, 1) forwards !important;
+  }
+
+  .orange-bellpepper.falling {
+    animation: fall-orange-tablet 1s cubic-bezier(0.5, 0, 1, 1) 0.1s forwards !important;
+  }
+
+  .banana.falling {
+    animation: fall-banana-tablet 1s cubic-bezier(0.5, 0, 1, 1) 0.2s forwards !important;
+  }
+
+  .yellow-bellpepper.falling {
+    animation: fall-yellow-tablet 1s cubic-bezier(0.5, 0, 1, 1) 0.15s forwards !important;
+  }
+
+  .carrot.falling {
+    animation: fall-carrot-tablet 1s cubic-bezier(0.5, 0, 1, 1) 0.25s forwards !important;
+  }
+
+  .taro.falling {
+    animation: fall-taro-tablet 1s cubic-bezier(0.5, 0, 1, 1) 0.3s forwards !important;
+  }
+
+  .introduction {
+    flex-direction: column;
+    min-height: auto;
+    padding: 3rem 2rem;
+    gap: 20rem;
+    margin-top: 10vh;
+  }
+
+  .cart-box,
+  .keychain {
+    width: 100%;
+    max-width: 2200px;
+    height: auto;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .flip-card-link {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+  }
+
+  .cart-box img {
+    rotate: 14deg;
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .keychain-img {
+    max-width: 60vh;
+
+    width: 100vw;
+    display: block;
+  }
+
+  .see-more-btn {
+    display: inline-block;
+  }
+
+  .main-footer h1 {
+    font-size: 8rem;
+  }
+
+  .main-footer {
+    min-height: 40vh;
+    padding: 3rem 2rem;
+    gap: 2rem;
+  }
+
+  .main-footer img {
+    width: 7vw;
+  }
+
+  .social-icons {
+    gap: 2rem;
+  }
+
+  .star {
+    width: 70vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .portfolio {
+    width: 80vw;
+  }
+
+  #main {
+    margin-bottom: -5vh;
+  }
+  .tomato {
+    width: 20vw;
+    top: 10%;
+    left: 40%;
+  }
+
+  .orange-bellpepper {
+    width: 20vw;
+    top: 22%;
+    right: 12%;
+  }
+
+  .banana {
+    width: 25vw;
+    top: 70%;
+    right: 8%;
+  }
+
+  .carrot {
+    width: 25vw;
+    bottom: 10%;
+    right: 40%;
+  }
+
+  .taro {
+    width: 35vw;
+    top: 20%;
+    left: 1%;
+  }
+
+  .taro {
+    width: 35vw;
+    top: 20%;
+    left: 1%;
+  }
+
+  .yellow-bellpepper {
+    width: 20vw;
+    bottom: 19%;
+    left: 10%;
+  }
+
+  .star {
+    width: 90vw;
+  }
+
+  .introduction {
+    padding: 1.5rem 1rem;
+    gap: 10rem;
+  }
+
+  .keychain {
+    max-width: 600px;
+    min-height: 300px;
+    gap: 3.5rem;
+  }
+
+  .cart-box img {
+    width: 90%;
+    margin-top: 5vh;
+  }
+
+  .introduction {
+    margin-top: 3vh;
+  }
+
+  .keychain img {
+    max-width: 60vh;
+    width: 40vh;
+  }
+  .see-more-btn {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .main-footer {
+    min-height: 6vh;
+    padding: 2rem 1rem;
+    gap: 1rem;
+  }
+
+  .main-footer h1 {
+    font-size: 3rem;
+  }
+
+  .main-footer img {
+    width: 8vw;
+    min-width: 20px;
+  }
+
+  .horizontal-scroll {
+    height: 6vh;
+  }
+
+  .scroll-track img {
+    height: 4vh;
+  }
+
+  .flip-card-inner {
+    transform: none !important;
+    transition: none !important;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: none !important;
+  }
+}

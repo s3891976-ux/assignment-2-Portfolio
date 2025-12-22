@@ -1,0 +1,113 @@
+.work-section {
+  padding: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.work-title {
+  font-family: "Freckle Face", system-ui;
+  font-size: 12rem;
+  color: #74a535;
+  text-align: center;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 0.9;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  width: 80vw;
+  max-width: 2200px;
+}
+
+.work-grid img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.work-grid img:hover {
+  transform: scale(1.05);
+}
+
+.description {
+  font-family: "Delius", cursive;
+  font-size: 1.6rem;
+  color: #027248;
+  text-align: center;
+  max-width: 1000px;
+  margin-bottom: 5vh;
+  margin-top: -3vh;
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 1024px) {
+  .work-title {
+    font-size: 7rem;
+  }
+  .work-section {
+    padding: 30px 10px;
+  }
+  .work-grid {
+    width: 95vw;
+    gap: 2rem;
+  }
+  .description {
+    font-size: 1.2rem;
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .work-title {
+    font-size: 7rem;
+    margin-top: 4rem;
+  }
+  .work-section {
+    padding: 20px 5px;
+  }
+  .work-grid {
+    grid-template-columns: 1fr 1fr;
+    width: 98vw;
+    margin-top: 2rem;
+    gap: 2rem;
+    width: 90vw;
+    max-width: 2500px;
+    justify-items: center;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 2vh;
+  }
+  .work-section {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .work-title {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+  }
+  .work-section {
+    padding: 10px 2px;
+  }
+  .work-grid {
+    grid-template-columns: 1fr;
+    width: 80vw;
+    gap: 1rem;
+  }
+  .description {
+    font-size: 0.9rem;
+    margin-bottom: 1vh;
+    margin-top: 0;
+  }
+}
