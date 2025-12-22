@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1644.7 491.46">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #027248;
+        stroke-miterlimit: 10;
+        stroke-width: 27px;
+      }
+
+      .cls-4 {
+        font-size: 408.75px;
+      }
+
+      .cls-4, .cls-5, .cls-6 {
+        fill: #027248;
+        font-family: DFVN-FreckleFace-Regular, 'DFVN Freckle Face';
+      }
+
+      .cls-5 {
+        font-size: 210.19px;
+      }
+
+      .cls-6 {
+        font-size: 130.61px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <rect class="cls-3" x="13.5" y="13.5" width="1617.7" height="464.46" rx="80.78" ry="80.78"/>
+  </g>
+  <g id="Layer_5" data-name="Layer 5">
+    <text class="cls-4" transform="translate(134.35 377.11)"><tspan x="0" y="0">2D</tspan></text>
+    <text class="cls-5" transform="translate(651.38 268.81)"><tspan x="0" y="0">il</tspan><tspan class="cls-2" x="105.09" y="0">l</tspan><tspan x="162.16" y="0">ustrate</tspan></text>
+    <text class="cls-6" transform="translate(657.37 389.28)"><tspan x="0" y="0">sec</tspan><tspan class="cls-1" x="187.95" y="0">t</tspan><tspan x="239.42" y="0">ion</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 213.03 214.21">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #bf4b22;
+      }
+
+      .cls-3 {
+        fill: #f5bc18;
+        font-family: RosarioRoman-Bold, Rosario;
+        font-size: 83.68px;
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+      }
+
+      .cls-4 {
+        fill: #f36c32;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <path class="cls-4" d="M144.8,24.86s92.23,42.52,62.22,119.29c-30.01,76.77-114.01,89.48-155.57,42.9C9.89,140.47-29.93,73.86,32.08,22.28c62.01-51.58,112.72,2.58,112.72,2.58Z"/>
+        <path class="cls-2" d="M136.61,54.12l8.36,12.12c.81,1.18-.17,2.75-1.59,2.54l-12.98-1.97c-.58-.09-1.16.14-1.53.61l-3.05,3.89c-1.03,1.32-3.15.41-2.89-1.25l1.34-8.84c.09-.61-.17-1.22-.67-1.58l-8.74-6.15c-1.41-.99-.52-3.2,1.18-2.94l12.07,1.83c.66.1,1.31-.21,1.65-.78l4.46-7.55c.89-1.51,3.22-.73,3.02,1.01l-.91,7.95c-.04.39.05.79.28,1.11Z"/>
+      </g>
+      <rect class="cls-1" x="49.39" y="77.66" width="117.64" height="117.64" rx="31.69" ry="31.69" transform="translate(66.63 -32.66) rotate(24.6)"/>
+      <text class="cls-3" transform="translate(61.32 148.12) rotate(26.65)"><tspan x="0" y="0">Ai</tspan></text>
+    </g>
+  </g>
+</svg>
