@@ -303,3 +303,25 @@ allModals.forEach(modal => {
         });
     }
 });
+
+const popAudio = new Audio('asset/pop.mp3');
+
+function playPopSound() {
+    popAudio.currentTime = 0;
+    popAudio.play().catch((err) => {
+        console.error('Không phát được âm thanh:', err);
+    });
+}
+
+const navLink = document.querySelector('.nav-links');
+if (navLink) {
+    const navItems = navLink.querySelectorAll('li');
+    navItems.forEach(item => {
+        item.addEventListener('click', playPopSound);
+    });
+}
+
+if (portfolio) {
+    portfolio.addEventListener('click', playPopSound);
+}
+
